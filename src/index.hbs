@@ -7,23 +7,23 @@
     <link rel="stylesheet" href="/index.css">
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/favicon.png">
-    <script src="/index.js"></script>
+    {{!-- <script src="/index.js"></script> --}}
 </head>
 <body>
 
 {{> icons }}
 
-<header class="header">
+<header class="header" id="top">
     <div class="container">
         <h1>
             Gwilyn
-            <button
+            {{!-- <button
                 type="button"
                 class="clean pronounce">
                 <svg class="icon">
                     <use href="#icon-volume-up-solid"/>
                 </svg>
-            </button>
+            </button> --}}
         </h1>
     </div>
 </header>
@@ -100,7 +100,7 @@
     </div>
 </section>
 
-<section class="section">
+<section class="section" id="projects">
     <div class="container">
         <div class="columns">
             <div class="column content">
@@ -224,7 +224,7 @@
     </div>
 </section>
 
-<footer class="footer section">
+<section class="section" id="contact">
     <div class="container-tablet">
         <div class="content">
             <hr/>
@@ -245,6 +245,30 @@
                         <use href="#icon-linkedin-brands"/>
                     </svg>
                 </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container-tablet">
+        <div class="content clearfix">
+            <div class="float-left">
+                <p>Credits:</p>
+                <p>Website design by
+                    <a href="//loucrobinson.com" target="_blank">Lou.</a>
+                </p>
+                <p>Icons by
+                    <a href="//fontawesome.com/license" target="_blank">FontAwesome.</a>
+                </p>
+                <p>"Coves" font by
+                    <a href="//harvatt.house" target="_blank">harvatt.house</a>.
+                </p>
+            </div>
+            <div class="float-right">
+                <p>
+                    Gwilyn Saunders &copy; 2019
+                </p>
             </div>
         </div>
     </div>

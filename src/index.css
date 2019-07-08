@@ -230,3 +230,34 @@ svg.icon {
         padding: 0 1rem;
     }
 }
+
+.footer {
+    padding: 20px 0;
+    
+    & .content {
+        opacity: 0.6;
+        padding: 0 20px;
+        
+        & p {
+            font-size: 0.6rem;
+            line-height: 0.8rem;
+        }
+    }
+}
+
+.clearfix:after {
+    content: " ";
+    clear: both;
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
