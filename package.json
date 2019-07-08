@@ -2,34 +2,46 @@
   "name": "gwillz.com",
   "version": "1.0.0",
   "description": "gwillz.com",
-  "main": "index.js",
+  "main": "serve.js",
   "scripts": {
     "build": "node build.js",
-    "start": "node serve.js"
+    "watch": "node build.js watch",
+    "dev": "node build.js watch serve",
+    "icons": "node icons.js",
+    "start": "node serve.js",
+    "clean": "rm -r public/*",
+    "assets": "cp -r assets/* public/"
   },
   "repository": {
     "type": "git",
     "url": "git@gwillz.com:gwillz/gwillz.com"
   },
   "author": "Gwilyn",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
-    "@goodthnx/metalsmith-handlebars": "^1.0.0",
-    "@goodthnx/metalsmith-postcss": "^1.0.0",
-    "@goodthnx/metalsmith-webpack": "^1.0.2",
+    "@goodthnx/metalsmith-handlebars": "file:../metalsmith-handlebars",
+    "@goodthnx/metalsmith-postcss": "file:../metalsmith-postcss",
+    "@goodthnx/metalsmith-webpack": "file:../metalsmith-webpack",
     "@types/express": "^4.16.1",
     "@types/node": "^8.10.45",
     "@types/react": "^16.8.12",
     "@types/react-dom": "^16.8.3",
     "@types/webpack": "^4.4.27",
+    "autoprefixer": "^9.6.0",
+    "cssnano": "^4.1.10",
     "express": "^4.16.4",
     "metalsmith": "^2.3.0",
+    "metalsmith-watch": "^1.0.3",
     "postcss": "^7.0.14",
-    "typescript": "^3.4.1",
+    "postcss-calc": "^7.0.1",
+    "postcss-import": "^12.0.1",
+    "postcss-preset-env": "^6.6.0",
+    "svg2sprite": "^2.0.1",
+    "ts-loader": "^6.0.4",
+    "typescript": "^3.5.2",
     "webpack": "^4.29.6"
   },
   "dependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "reset.css": "^2.0.2"
   }
 }

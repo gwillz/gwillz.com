@@ -7,8 +7,248 @@
     <link rel="stylesheet" href="/index.css">
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/favicon.png">
+    <script src="/index.js"></script>
 </head>
 <body>
-    <div id="root"></div>
+
+{{> icons }}
+
+<header class="header">
+    <div class="container">
+        <h1>
+            Gwilyn
+            <button
+                type="button"
+                class="clean pronounce">
+                <svg class="icon">
+                    <use href="#icon-volume-up-solid"/>
+                </svg>
+            </button>
+        </h1>
+    </div>
+</header>
+
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h2>Software Engineer</h2>
+            <br/>
+            
+            <div class="columns">
+                <div class="column content">
+                    <h3>Experience</h3>
+                    <div class="timeline">
+                        <div class="title">
+                            2017
+                        </div>
+                        <div class="description">
+                            <p>
+                                Good Thnx
+                                <br>
+                                Software Engineer
+                                <br>
+                                (Current)
+                            </p>
+                        </div>
+                        <div class="title">
+                            2017
+                        </div>
+                        <div class="description">
+                            <p>
+                                University of South Australia
+                                <br>
+                                Casual ITMS Tutor
+                                <br>
+                                (Current)
+                            </p>
+                        </div>
+                        <div class="title">
+                            2015
+                        </div>
+                        <div class="description">
+                            <p>
+                                Stemtap / MK2
+                                <br>
+                                Co-founder, Software Engineer
+                            </p>
+                        </div>
+                        <div class="title">
+                            2012
+                        </div>
+                        <div class="description">
+                            <p>
+                                University of South Australia
+                                <br>
+                                Bachelor of Software Engineering (Honours)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column content">
+                    <h3>Bio</h3>
+                    <p>
+                        Hi, I'm a Software Engineer.
+                    </p>
+                    <p>
+                        Most days I'm writing software and I enjoy it.
+                        If you need some software, I can write that.
+                        Let me know.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column content">
+                <hr/>
+                <h3>Projects</h3>
+                <br/>
+                <br/>
+                
+                <div class="tile">
+                    <h3>Good Thnx</h3>
+                    <p>
+                        Good Thnx is gifting and recognition platform that
+                        powers gratitude through its charity payments API.
+                    </p>
+                    <p>
+                        <a href="//thnx.me" target="_blank">
+                            thnx.me
+                        </a>
+                        <br>
+                        <a href="//good.tc" target="_blank">
+                            good.tc
+                        </a>
+                    </p>
+                </div>
+                
+                <div class="tile">
+                    <h3>Stemtap</h3>
+                    <p>
+                        Stemtap is a tangible (hands-on) coding platform for
+                        primary and secondary schools.
+                    </p>
+                    <p>
+                        Discontinued, but I'll still talk for hours about it.
+                    </p>
+                    <p>
+                        <a href="//stemtap.com" target="_blank">
+                            stemtap.com
+                        </a>
+                    </p>
+                </div>
+                <div class="tile">
+                    <h3>Eagle Eye</h3>
+                    <p>
+                        A computer vision research paper that attempts to
+                        validate annotations using a 3D tracking system. But
+                        then we decided to sabotage ourselves by using a
+                        360&deg; camera.
+                    </p>
+                    <p>
+                        It still worked, and we also created 40+ datasets.
+                    </p>
+                    <p>
+                        <a href="//ieeexplore.ieee.org/document/8227409" target="_blank">
+                            ieeexplore.ieee.org
+                        </a>
+                        <br>
+                        <a href="//github.com/gwillz/EagleEye" target="_blank">
+                            github.com
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="column content">
+                <div class="tile">
+                    <h3>MD Slides</h3>
+                    <p>
+                        A quick editor/presentor web-app for presentation
+                        slides written in Markdown.
+                    </p>
+                    <p>
+                        <a href="//slides.gwillz.com?tutorial" target="_blank">
+                            slides.gwillz.com
+                        </a>
+                    </p>
+                </div>
+                <div class="tile">
+                    <h3>Time Calculator</h3>
+                    <p>
+                        Natural time calculation, because
+                        1:50&nbsp;+&nbsp;2:50 isn't 4:00.
+                    </p>
+                    <p>
+                        (it's 4:30).
+                    </p>
+                    <p>
+                        <a href="//time.gwillz.com" target="_blank">
+                            time.gwillz.com
+                        </a>
+                    </p>
+                </div>
+                <div class="tile">
+                    <h3>Juke Room</h3>
+                    <p>
+                        Room codes and YouTube playlists.
+                        Think like, a jukebox in a pub but like Jackbox.tv.
+                    </p>
+                    <p>
+                        (WIP)
+                    </p>
+                </div>
+                <div class="tile">
+                    <h3>Wisdom Data and Mapping</h3>
+                    <p>
+                        Over the years we've built serveral products largely
+                        based in geospatial and weather data.
+                    </p>
+                    <p>
+                        Clients include:
+                        <a href="//naturalresources.sa.gov.au" target="_blank">NRM SA</a>,
+                        <a href="//riverlandwine.com.au" target="_blank">Riverland Wine</a>,
+                        <a href="//pir.sa.gov.au/research/research_centres_and_facilities/minnipa_agricultural_centre" target="_blank">Minnipa SARDI</a>.
+                    </p>
+                    <p>
+                        <a href="//wisdomdata.com.au" target="_blank">
+                            wisdomdata.com.au
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer section">
+    <div class="container-tablet">
+        <div class="content">
+            <hr/>
+            <h3>Contact</h3>
+            <div class="level level-tight">
+                <a href="mailto:me@gwilyn.com" class="level-item clean" target="_blank">
+                    <svg class="icon icon-big">
+                        <use href="#icon-envelope-regular"/>
+                    </svg>
+                </a>
+                <a href="//github.com/gwillz" class="level-item clean" target="_blank">
+                    <svg class="icon icon-big">
+                        <use href="#icon-github-brands"/>
+                    </svg>
+                </a>
+                <a href="//linkedin.com/in/gwillz" class="level-item clean" target="_blank">
+                    <svg class="icon icon-big">
+                        <use href="#icon-linkedin-brands"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
 </body>
 </html>

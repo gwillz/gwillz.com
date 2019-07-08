@@ -1,0 +1,24 @@
+@charset "UTF-8";
+/*!
+ * Personal Licence | Personal Use ONLY
+ * For Coves Light & Coves Bold.
+ * For commercial use, email me at jackharvatt@gmail.com to aquire license.
+ * Coves Light, Coves Bold © Copyright Jack Harvatt.
+ * 2016 All Rights Reserved
+ */
+
+@font-face {
+    font-family: "Coves";
+    src: url("/coves-bold.otf") format("typetype");
+    font-display: swap;
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Coves";
+    src: url("/coves-light.otf") format("typetype");
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+}

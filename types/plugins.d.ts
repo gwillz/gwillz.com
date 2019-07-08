@@ -1,8 +1,4 @@
 
-
-type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
-
-
 declare module "@goodthnx/metalsmith-webpack" {
     import webpack from 'webpack'
     
@@ -52,5 +48,14 @@ declare module "@goodthnx/metalsmith-handlebars" {
     }
     
     function plugin(options?: Options): Plugin;
+    export = plugin;
+}
+
+declare module "metalsmith-watch" {
+    import handlebars from 'handlebars'
+    
+    type Plugin = (...args: any[]) => void;
+    
+    function plugin(options?: any): Plugin;
     export = plugin;
 }

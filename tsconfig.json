@@ -1,13 +1,18 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "commonjs",
+    "module": "esnext",
+    "lib": ["es6", "es2017", "dom"],
     "allowJs": true,
     "checkJs": true,
-    "jsx": "react",
-    // "outDir": "./",
-    // "rootDir": "./",
-    // "baseUrl": "./",
+    // "jsx": "react",
+    // "outDir": "./public",
+    "rootDirs": [
+      "src",
+      "types"
+    ],
+    // "baseUrl": "./src",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "incremental": true,
     "importHelpers": true,
@@ -16,7 +21,11 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": false,
     "esModuleInterop": true
-  }
+  },
+  "exclude": [
+    "public",
+    "assets",
+    "icons"
+  ]
 }

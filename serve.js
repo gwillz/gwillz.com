@@ -9,9 +9,7 @@ const PORT = 3000 || process.env.PORT;
 function main() {
     const app = express();
     
-    app.get("/*", (req, res) => {
-        res.sendFile(PUBLIC + req.path);
-    })
+    app.get("/*", express.static(PUBLIC))
     
     app.listen(PORT, () => {
         console.log("Listening on:", PORT);
@@ -19,4 +17,7 @@ function main() {
     })
 }
 
+module.exports = main;
+
+// @ts-ignore
 if (require.main === module) main();

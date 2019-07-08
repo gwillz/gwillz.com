@@ -1,0 +1,232 @@
+
+@import "reset.css";
+@import "./coves.css";
+
+:root {
+    --color-teal: #1A5C6C;
+    --color-orange: #E4A353;
+    --color-white: #D9D2CA;
+    --color-blue: #4072CB;
+    
+    --size-heading: 1.5rem;
+    --size-text: 1rem;
+    --size-line: 1.4rem;
+    --size-border: 1.5pt;
+    
+    --width-mobile: 320px;
+    --width-tablet: 580px;
+    --width-medium: 768px;
+    --width-content: 1000px;
+}
+
+@custom-media --viewport-mobile (max-width: 320px);
+@custom-media --viewport-tablet (max-width: 580px);
+@custom-media --viewport-medium (max-width: 768px);
+@custom-media --viewport-content (max-width: 1000px);
+@custom-media --light (prefer-color-scheme: light);
+
+@custom-selector :--headings h1, h2, h3, h4, h5, h6;
+@custom-selector :--blocks p, table, ol, ul, img, figure, hr;
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+html {
+    font-size: 14pt;
+}
+
+body {
+    background: var(--color-teal);
+    color: var(--color-white);
+    font-family: Coves, Gotham, sans-serif;
+    font-weight: 400;
+    
+    @media (--light) {
+        background: var(--color-white);
+        color: var(--color-teal);
+    }
+}
+
+a {
+    color: var(--color-white);
+    text-decoration: underline;
+    
+    @media (--light) {
+        color: var(--color-teal);
+    }
+}
+
+:--headings {
+    color: var(--color-orange);
+    font-size: var(--size-header);
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    
+    @media (--light) {
+        color: var(--color-blue);
+    }
+}
+
+:--blocks {
+    line-height: var(--size-line);
+    letter-spacing: 0.1em;
+}
+
+.section {
+    width: 100%;
+}
+
+.header {
+    padding: 120px 0 60px;
+    text-align: center;
+    
+    & h1 {
+        border: var(--size-border) solid var(--color-orange);
+        border-radius: 1em;
+        display: inline-block;
+        padding: 0.5em 5em;
+    }
+}
+
+.container {
+    width: var(--width-content);
+    margin: 0 auto;
+    
+    @media (--viewport-content) {
+        width: 100%;
+    }
+}
+
+.container-tablet {
+    width: var(--width-tablet);
+    margin: 0 auto;
+    
+    @media (--viewport-tablet) {
+        width: 100%;
+    }
+}
+
+
+.section {
+    padding: 20px 0;
+    
+    & .content {
+        padding: 0 20px;
+    }
+    
+    & :--headings {
+        border-bottom: var(--size-border) solid var(--color-blue);
+        padding: 0 0 1em;
+        text-align: center;
+    }
+    
+    & :--blocks,
+    & :--headings {
+        margin: 0 0 1em;
+    }
+    
+    & h2 {
+        margin: 0 0 1.75em;
+    }
+    
+    & h2::after {
+        content: '';
+        border-bottom: var(--size-border) solid var(--color-blue);
+        display: block;
+        position: relative;
+        top: 1.75em;
+        width: 100%;
+    }
+    
+}
+
+hr {
+    border-bottom: var(--size-border) solid var(--color-blue);
+}
+
+.level {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    
+    &.level-tight {
+        justify-content: center;
+    }
+    
+    & > .level-item {
+        margin: 5px;
+    }
+}
+
+.columns {
+    display: flex;
+    
+    & > .column {
+        flex: 1 1 0px;
+        min-width: calc(var(--width-tablet) / 2);
+    }
+    
+    &.columns-divider > .column + .column {
+        border-left: var(--size-border) solid var(--color-blue);
+    }
+    
+    @media (--viewport-tablet) {
+        & > .column {
+            border: none !important;
+        }
+    }
+}
+
+button.clean {
+    border: none;
+    background: none;
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+}
+
+a.clean {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+svg.icon {
+    height: 1em;
+    width: 1em;
+    vertical-align: bottom;
+    
+    &.icon-big {
+        height: 2.5em;
+        width: 2.5em;
+    }
+}
+
+.tile {
+    border: var(--size-border) solid var(--color-blue);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 0 0 3rem;
+    text-align: center;
+}
+
+.timeline {
+    align-items: start;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    grid-auto-flow: row;
+    
+    & > .title {
+        line-height: var(--size-line);
+        text-align: right;
+        padding: 0 1rem;
+    }
+    
+    & > .description {
+        border-left: var(--size-border) solid var(--color-blue);
+        padding: 0 1rem;
+    }
+}
