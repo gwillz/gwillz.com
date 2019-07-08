@@ -35,6 +35,7 @@ html, body {
 
 html {
     font-size: 14pt;
+    min-width: var(--width-mobile);
 }
 
 body {
@@ -64,6 +65,7 @@ a {
     font-weight: 700;
     letter-spacing: 0.2em;
     text-transform: uppercase;
+    line-height: var(--size-line);
     
     @media (--light) {
         color: var(--color-blue);
@@ -163,19 +165,24 @@ hr {
 
 .columns {
     display: flex;
+    flex-flow: wrap;
     
     & > .column {
         flex: 1 1 0px;
-        min-width: calc(var(--width-tablet) / 2);
     }
     
-    &.columns-divider > .column + .column {
-        border-left: var(--size-border) solid var(--color-blue);
-    }
-    
-    @media (--viewport-tablet) {
+    @media (--viewport-medium) {
         & > .column {
-            border: none !important;
+            min-width: 100%;
+        }
+        
+        &.columns-mobile-reverse {
+            flex-flow: wrap-reverse;
+            
+            & .column:not(:last-child) h3 {
+                border-top: var(--size-border) solid var(--color-blue);
+                padding-top: 1em;
+            }
         }
     }
 }
