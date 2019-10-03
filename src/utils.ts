@@ -25,3 +25,37 @@ export function on(selector: string, type: string, cb: Listener) {
     document.querySelectorAll(selector)
     .forEach(element => element.addEventListener(type, cb.bind(element), { passive: true }));
 }
+
+export function one(selector: string) {
+    return document.querySelector(selector);
+}
+
+export function all(selector: string) {
+    return Array.from(document.querySelectorAll(selector));
+}
+
+
+export default G;
+
+function G(cb: Listener): void;
+function G(selector: string): Element[];
+function G(selector: string, type: string, cb: Listener): void;
+function G(selector: any, type?: string, cb?: Listener) {
+    if (typeof selector === "string") {
+        if (type && cb) {
+            ready.on(selector, type, cb);
+        }
+        else {
+            return all(selector);
+        }
+    }
+    else {
+        ready(selector);
+    }
+    return;
+}
+
+G.ready = ready;
+G.on = on;
+G.one = one;
+G.all = all;

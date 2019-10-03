@@ -14,6 +14,12 @@ async function main() {
     const collection = sprites.collection({
         inline: true,
         iconPrefix: "icon-",
+        clean: {
+            stripStyles: true,
+            stripEmptyTags: true,
+            stripExtraAttrs: true,
+            stripAttrs: ["width", "height"],
+        }
     });
     
     for (let [name, icon] of icons) {

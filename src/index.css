@@ -1,27 +1,24 @@
 
 @import "reset.css";
-@import "./coves.css";
 
 :root {
-    --color-teal: #1A5C6C;
-    --color-orange: #E4A353;
-    --color-white: #D9D2CA;
-    --color-blue: #4072CB;
+    --color-orange: #C69018;
+    --color-black: #111;
+    --color-paper: #feefd6;
     
     --size-heading: 1.5rem;
     --size-text: 1rem;
-    --size-line: 1.4rem;
     --size-border: 1.5pt;
     
     --width-mobile: 320px;
     --width-tablet: 580px;
-    --width-medium: 768px;
+    --width-medium: 680px;
     --width-content: 1000px;
 }
 
-@custom-media --viewport-mobile (max-width: 320px);
+@custom-media --viewport-mobile (max-width: 480px);
 @custom-media --viewport-tablet (max-width: 580px);
-@custom-media --viewport-medium (max-width: 768px);
+@custom-media --viewport-medium (max-width: 680px);
 @custom-media --viewport-content (max-width: 1000px);
 @custom-media --light (prefer-color-scheme: light);
 
@@ -31,6 +28,7 @@
 html, body {
     height: 100%;
     width: 100%;
+    margin: 0;
 }
 
 html {
@@ -39,19 +37,19 @@ html {
 }
 
 body {
-    background: var(--color-teal);
-    color: var(--color-white);
-    font-family: Coves, Gotham, sans-serif;
+    background: var(--color-paper);
+    color: var(--color-black);
+    font-family: Literata, serif;
     font-weight: 400;
-    
-    @media (--light) {
-        background: var(--color-white);
-        color: var(--color-teal);
-    }
+    line-height: 1.4;
+}
+
+img {
+    max-width: 100%;
 }
 
 a {
-    color: var(--color-white);
+    color: #555;
     text-decoration: underline;
     
     @media (--light) {
@@ -60,37 +58,27 @@ a {
 }
 
 :--headings {
-    color: var(--color-orange);
     font-size: var(--size-header);
     font-weight: 700;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
     line-height: var(--size-line);
-    
-    @media (--light) {
-        color: var(--color-blue);
-    }
 }
 
-:--blocks {
-    line-height: var(--size-line);
-    letter-spacing: 0.1em;
+:--headings, :--blocks {
+    margin: 0 0 15px;
 }
 
-.section {
-    width: 100%;
+h1 {
+    font-size: 38pt;
+    line-height: 1.1;
+}
+
+h3 {
+    color: #555;
+    font-size: 14pt;
 }
 
 .header {
-    padding: 120px 0 60px;
-    text-align: center;
-    
-    & h1 {
-        border: var(--size-border) solid var(--color-orange);
-        border-radius: 1em;
-        display: inline-block;
-        padding: 0.5em 5em;
-    }
+    padding: 20px 20px 80px;
 }
 
 .container {
@@ -102,102 +90,67 @@ a {
     }
 }
 
-.container-tablet {
-    width: var(--width-tablet);
-    margin: 0 auto;
-    
-    @media (--viewport-tablet) {
-        width: 100%;
-    }
-}
-
-
 .section {
-    padding: 20px 0;
-    
-    & .content {
-        padding: 0 20px;
-    }
-    
-    & :--headings {
-        border-bottom: var(--size-border) solid var(--color-blue);
-        padding: 0 0 1em;
-        text-align: center;
-    }
-    
-    & :--blocks,
-    & :--headings {
-        margin: 0 0 1em;
-    }
-    
-    & h2 {
-        margin: 0 0 1.75em;
-    }
-    
-    & h2::after {
-        content: '';
-        border-bottom: var(--size-border) solid var(--color-blue);
-        display: block;
-        position: relative;
-        top: 1.75em;
-        width: 100%;
-    }
-    
+    padding: 20px;
 }
 
-hr {
-    border-bottom: var(--size-border) solid var(--color-blue);
-}
-
-.level {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
+.header-grid {
+    display: grid;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "img-1 ."
+        "img-1 img-2"
+        "img-1 img-2"
+        "title img-2"
+    ;
     
-    &.level-tight {
-        justify-content: center;
+    & .header-title {
+        grid-area: title;
+        max-width: 350px;
     }
     
-    & > .level-item {
-        margin: 5px;
+    & .header-tile-1 {
+        grid-area: img-1;
+        align-self: end;
+        width: 80%;
     }
-}
-
-.columns {
-    display: flex;
-    flex-flow: wrap;
     
-    & > .column {
-        flex: 1 1 0px;
+    & .header-tile-2 {
+        grid-area: img-2;
+        align-self: end;
+        margin-left: auto;
+        width: 70%;
     }
     
     @media (--viewport-medium) {
-        & > .column {
-            min-width: 100%;
-        }
+        grid-template-columns: 1fr;
+        grid-column-gap: 0;
         
-        &.columns-mobile-reverse {
-            flex-flow: wrap-reverse;
-            
-            & .column:not(:last-child) h3 {
-                border-top: var(--size-border) solid var(--color-blue);
-                padding-top: 1em;
-            }
+        & .header-tile-2 {
+            display: none;
         }
     }
+    
 }
 
-button.clean {
-    border: none;
-    background: none;
-    color: inherit;
-    cursor: pointer;
-    font: inherit;
-}
-
-a.clean {
-    color: inherit;
-    text-decoration: inherit;
+.columns {
+    columns: 3;
+    column-gap: 40px;
+    
+    & .column {
+        break-inside: avoid;
+        margin: 0 0 50px;
+    }
+    
+    @media (--viewport-medium) {
+        columns: 2;
+    }
+    
+    @media (--viewport-mobile) {
+        columns: 1;
+    }
 }
 
 svg.icon {
@@ -211,44 +164,27 @@ svg.icon {
     }
 }
 
-.tile {
-    border: var(--size-border) solid var(--color-blue);
-    border-radius: 1rem;
-    padding: 1rem;
-    margin: 0 0 3rem;
-    text-align: center;
-}
-
-.timeline {
-    align-items: start;
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto;
-    grid-auto-flow: row;
+.contacts {
+    margin: 0 auto;
+    text-align: right;
+    width: 240px;
     
-    & > .title {
-        line-height: var(--size-line);
-        text-align: right;
-        padding: 0 1rem;
+    & .bubble {
+        display: block;
+        width: 60%;
+        text-align: left;   
     }
     
-    & > .description {
-        border-left: var(--size-border) solid var(--color-blue);
-        padding: 0 1rem;
+    & a {
+        text-decoration: none;
     }
 }
 
 .footer {
-    padding: 20px 0;
+    padding: 20px;
     
-    & .content {
-        opacity: 0.6;
-        padding: 0 20px;
-        
-        & p {
-            font-size: 0.6rem;
-            line-height: 0.8rem;
-        }
+    & p {
+        font-size: 10pt;
     }
 }
 

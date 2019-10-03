@@ -16,6 +16,7 @@ module.exports = {
             {
                 test: /\.(js|json|ts)$/,
                 loader: 'ts-loader',
+                exclude: /\/node_modules\//,
                 options: {
                     transpileOnly: false,
                     experimentalWatchApi: true,

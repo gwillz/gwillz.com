@@ -2,11 +2,12 @@
 
 const Metalsmith = require('metalsmith');
 const handlebars = require('@goodthnx/metalsmith-handlebars');
-const webpack = require('@goodthnx/metalsmith-webpack');
 const postcss = require('@goodthnx/metalsmith-postcss');
 const watch = require('metalsmith-watch');
 const serve = require('./serve');
+const path = require('path');
 
+const r = path.resolve.bind(null, __dirname);
 
 function main() {
     const isProduction = process.env.NODE_ENV === "production";
@@ -18,16 +19,12 @@ function main() {
     .metadata(require('./metadata.json'))
     .source("./src")
     .destination("./public")
-    .use(webpack({
-        pattern: "*.ts",
-        config: __dirname + "/webpack.config.js",
-    }))
     .use(postcss({
         pattern: "*.css",
-        config: __dirname + "/postcss.config.js",
+        config: r("postcss.config.js"),
     }))
     .use(handlebars({
-        partials: __dirname + "/src",
+        partials: r("src"),
     }))
     
     if (isWatch) {

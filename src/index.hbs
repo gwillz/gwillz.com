@@ -4,6 +4,8 @@
     <title>{{title}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Gwilyn Saunders">
+    <meta name="theme-color" content="#feefd6">
+    <link ref="stylesheet" href="https://fonts.google.com/specimen/Literata?selection.family=Literata">
     <link rel="stylesheet" href="/index.css">
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/favicon.png">
@@ -13,242 +15,202 @@
 
 {{> icons }}
 
+{{!--
+2017
+Good Thnx
+Software Engineer
+(Current)
+
+2017
+University of South Australia
+Casual ITMS Tutor
+(Current)
+
+2015
+Stemtap / MK2
+Co-founder, Software Engineer
+
+2012
+University of South Australia
+Bachelor of Software Engineering (Honours)
+--}}
+
 <header class="header" id="top">
     <div class="container">
-        <h1>
-            Gwilyn
-            {{!-- <button
-                type="button"
-                class="clean pronounce">
-                <svg class="icon">
-                    <use href="#icon-volume-up-solid"/>
-                </svg>
-            </button> --}}
-        </h1>
+        <div class="header-grid">
+            <div class="header-title">
+                <h1>Gwilyn<br>Saunders</h1>
+                <p>Software dev.</p>
+                <p>
+                    Most days I'm writing software and I enjoy it.
+                    If you need some software, I can write that.
+                </p>
+            </div>
+            <img class="header-tile-1" src="/gwilyn_one.png">
+            <img class="header-tile-2" src="/gwilyn_two.png">
+        </div>
     </div>
 </header>
 
 <section class="section">
     <div class="container">
-        <div class="content">
-            <h2>Software Engineer</h2>
-        </div>
-        <div class="columns columns-mobile-reverse">
-            <div class="column">
-            <div class="content">
-                <h3>Experience</h3>
-                <div class="timeline">
-                    <div class="title">
-                        2017
-                    </div>
-                    <div class="description">
-                        <p>
-                            Good Thnx
-                            <br>
-                            Software Engineer
-                            <br>
-                            (Current)
-                        </p>
-                    </div>
-                    <div class="title">
-                        2017
-                    </div>
-                    <div class="description">
-                        <p>
-                            University of South Australia
-                            <br>
-                            Casual ITMS Tutor
-                            <br>
-                            (Current)
-                        </p>
-                    </div>
-                    <div class="title">
-                        2015
-                    </div>
-                    <div class="description">
-                        <p>
-                            Stemtap / MK2
-                            <br>
-                            Co-founder, Software Engineer
-                        </p>
-                    </div>
-                    <div class="title">
-                        2012
-                    </div>
-                    <div class="description">
-                        <p>
-                            University of South Australia
-                            <br>
-                            Bachelor of Software Engineering (Honours)
-                        </p>
-                    </div>
-                </div>
-            </div>
-            </div>
-            <div class="column">
-            <div class="content">
-                <h3>Bio</h3>
-                <p>
-                    Hi, I'm a Software Engineer.
-                </p>
-                <p>
-                    Most days I'm writing software and I enjoy it.
-                    If you need some software, I can write that.
-                    Let me know.
-                </p>
-            </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section" id="projects">
-    <div class="container">
         <div class="columns">
             <div class="column">
-            <div class="content">
-                <hr/>
-                <h3>Projects</h3>
-                <br/>
-                <br/>
-                
-                <div class="tile">
-                    <h3>Good Thnx</h3>
-                    <p>
-                        Good Thnx is gifting and recognition platform that
-                        powers gratitude through its charity payments API.
-                    </p>
-                    <p>
-                        <a href="//thnx.me" target="_blank">
-                            thnx.me
-                        </a>
-                        <br>
-                        <a href="//good.tc" target="_blank">
-                            good.tc
-                        </a>
-                    </p>
-                </div>
-                
-                <div class="tile">
-                    <h3>Stemtap</h3>
-                    <p>
-                        Stemtap is a tangible (hands-on) coding platform for
-                        primary and secondary schools.
-                    </p>
-                    <p>
-                        Discontinued, but I'll still talk for hours about it.
-                    </p>
-                    <p>
-                        <a href="//stemtap.com" target="_blank">
-                            stemtap.com
-                        </a>
-                    </p>
-                </div>
-                <div class="tile">
-                    <h3>Eagle Eye</h3>
-                    <p>
-                        A computer vision research paper that attempts to
-                        validate annotations using a 3D tracking system. But
-                        then we decided to sabotage ourselves by using a
-                        360&deg; camera.
-                    </p>
-                    <p>
-                        It still worked, and we also created 40+ datasets.
-                    </p>
-                    <p>
-                        <a href="//ieeexplore.ieee.org/document/8227409" target="_blank">
-                            ieeexplore.ieee.org
-                        </a>
-                        <br>
-                        <a href="//github.com/gwillz/EagleEye" target="_blank">
-                            github.com
-                        </a>
-                    </p>
-                </div>
+                <h3>Good Thnx</h3>
+                <p>
+                    Good Thnx is gifting and recognition platform that
+                    powers gratitude through its charity payments API.
+                </p>
+                <p>
+                    <a href="//thnx.me" target="_blank">
+                        thnx.me
+                    </a>
+                </p>
             </div>
-            </div>
+            
             <div class="column">
-            <div class="content">
-                <div class="tile">
-                    <h3>MD Slides</h3>
-                    <p>
-                        A quick editor/presentor web-app for presentation
-                        slides written in Markdown.
-                    </p>
-                    <p>
-                        <a href="//slides.gwillz.com?tutorial" target="_blank">
-                            slides.gwillz.com
-                        </a>
-                    </p>
-                </div>
-                <div class="tile">
-                    <h3>Time Calculator</h3>
-                    <p>
-                        Natural time calculation, because
-                        1:50&nbsp;+&nbsp;2:50 isn't 4:00.
-                    </p>
-                    <p>
-                        (it's 4:30).
-                    </p>
-                    <p>
-                        <a href="//time.gwillz.com" target="_blank">
-                            time.gwillz.com
-                        </a>
-                    </p>
-                </div>
-                <div class="tile">
-                    <h3>Juke Room</h3>
-                    <p>
-                        Room codes and YouTube playlists.
-                        Think like, a jukebox in a pub but like Jackbox.tv.
-                    </p>
-                    <p>
-                        (WIP)
-                    </p>
-                </div>
-                <div class="tile">
-                    <h3>Wisdom Data and Mapping</h3>
-                    <p>
-                        Over the years we've built serveral products largely
-                        based in geospatial and weather data.
-                    </p>
-                    <p>
-                        Clients include:
-                        <a href="//naturalresources.sa.gov.au" target="_blank">NRM SA</a>,
-                        <a href="//riverlandwine.com.au" target="_blank">Riverland Wine</a>,
-                        <a href="//pir.sa.gov.au/research/research_centres_and_facilities/minnipa_agricultural_centre" target="_blank">Minnipa SARDI</a>.
-                    </p>
-                    <p>
-                        <a href="//wisdomdata.com.au" target="_blank">
-                            wisdomdata.com.au
-                        </a>
-                    </p>
-                </div>
+                <h3>Stemtap</h3>
+                <p>
+                    Stemtap is a tangible (hands-on) coding platform for
+                    primary and secondary schools.
+                </p>
+                <p>
+                    Discontinued, but I'll still talk for hours about it.
+                </p>
+                {{!-- <p>
+                    <a href="/graveyard/stemtap" target="_blank">
+                        stemtap.com
+                    </a>
+                </p> --}}
             </div>
+            
+            <div class="column">
+                <h3>Field Assistant</h3>
+                <p>
+                    Aka Bugman. For recording bug observations in the field and
+                    exporting to a spreadsheet.
+                </p>
+                <p>
+                    <a href="//bugman.gwillz.com" target="_blank">
+                        bugman.gwillz.com
+                    </a>
+                </p>
+            </div>
+            
+            <div class="column">
+                <h3>Eagle Eye</h3>
+                <p>
+                    A computer vision research paper that attempts to
+                    validate annotations using a 3D tracking system. But
+                    then we decided to sabotage ourselves by using a
+                    360&deg; camera.
+                </p>
+                <p>
+                    It still worked, and we also created 40+ datasets.
+                </p>
+                <p>
+                    {{!-- <a href="/projects/eagle-eye">
+                        Tracing Videos
+                    </a>
+                    <br> --}}
+                    <a href="//ieeexplore.ieee.org/document/8227409" target="_blank">
+                        ieeexplore.ieee.org
+                    </a>
+                    <br>
+                    <a href="//github.com/gwillz/EagleEye" target="_blank">
+                        github.com
+                    </a>
+                </p>
+            </div>
+            
+            <div class="column">
+                <h3>MD Slides</h3>
+                <p>
+                    A quick editor/presenter web-app for presentation
+                    slides written in Markdown.
+                </p>
+                <p>
+                    <a href="//slides.gwillz.com?tutorial" target="_blank">
+                        slides.gwillz.com
+                    </a>
+                </p>
+            </div>
+            
+            <div class="column">
+                <h3>Time Calculator</h3>
+                <p>
+                    Natural time calculation, because
+                    1:50&nbsp;+&nbsp;2:50 isn't 4:00.
+                </p>
+                <p>
+                    (it's 4:30).
+                </p>
+                <p>
+                    <a href="//time.gwillz.com" target="_blank">
+                        time.gwillz.com
+                    </a>
+                </p>
+            </div>
+            
+            {{!-- <div class="column">
+                <h3>Juke Room</h3>
+                <p>
+                    Room codes and YouTube playlists.
+                    Think like, a jukebox in a pub but like Jackbox.tv.
+                </p>
+                <p>
+                    (WIP)
+                </p>
+            </div> --}}
+            
+            <div class="column">
+                <h3>Wisdom Data and Mapping</h3>
+                <p>
+                    Over the years we've built several products largely
+                    based in geo-spatial and weather data.
+                </p>
+                <p>
+                    Clients include:
+                    <a href="//naturalresources.sa.gov.au" target="_blank">NRM SA</a>,
+                    <a href="//riverlandwine.com.au" target="_blank">Riverland Wine</a>,
+                    <a href="//pir.sa.gov.au/research/research_centres_and_facilities/minnipa_agricultural_centre" target="_blank">Minnipa SARDI</a>.
+                </p>
+                <p>
+                    <a href="//wisdomdata.com.au" target="_blank">
+                        wisdomdata.com.au
+                    </a>
+                    <br>
+                    {{!-- <a href="/graveyard/nrmsa">
+                        NRM Weather App
+                    </a> --}}
+                    {{!-- <a href="/graveyard/minnipa">
+                        Minnipa Weeds App
+                    </a> --}}
+                </p>
             </div>
         </div>
     </div>
 </section>
 
 <section class="section" id="contact">
-    <div class="container-tablet">
-        <div class="content">
-            <hr/>
-            <h3>Contact</h3>
-            <div class="level level-tight">
+    <div class="container">
+        <div class="contacts">
+            <img class="bubble" src="/speechbubble.png">
+            
+            <div>
                 <a href="mailto:me@gwilyn.com" class="level-item clean" target="_blank">
                     <svg class="icon icon-big">
-                        <use href="#icon-envelope-regular"/>
+                        <use href="#icon-lou-email"/>
                     </svg>
                 </a>
                 <a href="//github.com/gwillz" class="level-item clean" target="_blank">
                     <svg class="icon icon-big">
-                        <use href="#icon-github-brands"/>
+                        <use href="#icon-lou-github"/>
                     </svg>
                 </a>
                 <a href="//linkedin.com/in/gwillz" class="level-item clean" target="_blank">
                     <svg class="icon icon-big">
-                        <use href="#icon-linkedin-brands"/>
+                        <use href="#icon-lou-linkedin"/>
                     </svg>
                 </a>
             </div>
@@ -257,19 +219,20 @@
 </section>
 
 <footer class="footer">
-    <div class="container-tablet">
-        <div class="content">
-            <p>Credits:</p>
-            <p>Website design by
-                <a href="//loucrobinson.com" target="_blank">Lou.</a>
-            </p>
-            <p>Icons by
-                <a href="//fontawesome.com/license" target="_blank">FontAwesome.</a>
-            </p>
-            <p>"Coves" font by
-                <a href="//harvatt.house" target="_blank">harvatt.house</a>.
-            </p>
-        </div>
+    <div class="container">
+        <p>Credits:</p>
+        <p>
+            Website design by
+            <a href="//lourobinson.co" target="_blank">
+                Lou Design
+            </a>
+        </p>
+        <p>
+            Private repo:
+            <a href="//git.gwillz.com/gwillz" target="_blank">
+                git.gwillz.com
+            </a>
+        </p>
     </div>
 </footer>
 
