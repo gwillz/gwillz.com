@@ -5,11 +5,11 @@
     --color-orange: #C69018;
     --color-black: #111;
     --color-paper: #feefd6;
-    
+
     --size-heading: 1.5rem;
     --size-text: 1rem;
     --size-border: 1.5pt;
-    
+
     --width-mobile: 320px;
     --width-tablet: 580px;
     --width-medium: 680px;
@@ -51,7 +51,7 @@ img {
 a {
     color: #555;
     text-decoration: underline;
-    
+
     @media (--light) {
         color: var(--color-teal);
     }
@@ -84,7 +84,7 @@ h3 {
 .container {
     width: var(--width-content);
     margin: 0 auto;
-    
+
     @media (--viewport-content) {
         width: 100%;
     }
@@ -105,49 +105,49 @@ h3 {
         "img-1 img-2"
         "title img-2"
     ;
-    
+
     & .header-title {
         grid-area: title;
         max-width: 350px;
     }
-    
+
     & .header-tile-1 {
         grid-area: img-1;
         align-self: end;
         width: 80%;
     }
-    
+
     & .header-tile-2 {
         grid-area: img-2;
         align-self: end;
         margin-left: auto;
         width: 70%;
     }
-    
+
     @media (--viewport-medium) {
         grid-template-columns: 1fr;
         grid-column-gap: 0;
-        
+
         & .header-tile-2 {
             display: none;
         }
     }
-    
+
 }
 
 .columns {
     columns: 3;
     column-gap: 40px;
-    
+
     & .column {
         break-inside: avoid;
         margin: 0 0 50px;
     }
-    
+
     @media (--viewport-medium) {
         columns: 2;
     }
-    
+
     @media (--viewport-mobile) {
         columns: 1;
     }
@@ -168,13 +168,13 @@ svg.icon {
     margin: 0 auto;
     text-align: right;
     width: 240px;
-    
+
     & .bubble {
         display: block;
         width: 60%;
         text-align: left;   
     }
-    
+
     & a {
         text-decoration: none;
     }
@@ -182,7 +182,7 @@ svg.icon {
 
 .footer {
     padding: 20px;
-    
+
     & p {
         font-size: 10pt;
     }
