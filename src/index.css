@@ -48,6 +48,14 @@ img {
     max-width: 100%;
 }
 
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
 a {
     color: #555;
     text-decoration: underline;
@@ -153,11 +161,18 @@ h3 {
     }
 }
 
+p.links {
+    & a {
+        display: block;
+    }
+}
+
 svg.icon {
     height: 1em;
     width: 1em;
-    vertical-align: bottom;
-    
+    margin: -0.1em 0;
+    vertical-align: baseline;
+
     &.icon-big {
         height: 2.5em;
         width: 2.5em;
@@ -172,7 +187,7 @@ svg.icon {
     & .bubble {
         display: block;
         width: 60%;
-        text-align: left;   
+        text-align: left;
     }
 
     & a {
@@ -203,4 +218,9 @@ svg.icon {
 
 .float-right {
     float: right;
+}
+
+.no-break {
+    word-wrap: none;
+    white-space: nowrap;
 }
