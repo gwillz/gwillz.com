@@ -18,7 +18,7 @@
   - [ ] bugman
   - [ ] react-mdeditor
 - images
-  - [ ] good thnx favicon
+  - [x] good thnx favicon
   - [ ] stemtap
   - [ ] field assistant
   - [ ] eagle eye (unisa..?)
