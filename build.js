@@ -3,6 +3,7 @@
 const Metalsmith = require('metalsmith');
 const handlebars = require('@goodthnx/metalsmith-handlebars');
 const postcss = require('@goodthnx/metalsmith-postcss');
+const sprites = require('@goodthnx/metalsmith-sprites');
 const watch = require('metalsmith-watch');
 const serve = require('./serve');
 const path = require('path');
@@ -22,6 +23,9 @@ function main() {
     .use(postcss({
         pattern: "*.css",
         config: r("postcss.config.js"),
+    }))
+    .use(sprites({
+        pattern: "icons/*.svg",
     }))
     .use(handlebars({
         partials: r("src"),
