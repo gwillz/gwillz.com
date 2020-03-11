@@ -7,7 +7,6 @@
     "build": "node build.js",
     "watch": "node build.js watch",
     "dev": "node build.js watch serve",
-    "icons": "node icons.js",
     "start": "node serve.js",
     "clean": "rm -r public/*",
     "assets": "cp -r assets/* public/"
