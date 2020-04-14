@@ -8,13 +8,13 @@
 - write a readme for metalsmith-sprites
 - write _this_ readme
 - push to github
-  - [ ] supernova
-  - [ ] react-mdeditor
-  - [ ] time-calculator (publish)
-  - [ ] bugman-qt (combine commit history with bugman)
-  - [ ] react-pagedown
+  - [x] supernova
+  - [x] react-mdeditor
+  - [x] time-calculator (publish)
+  - [x] bugman-qt (combine commit history with bugman)
+  - [x] react-pagedown
   - [x] metalsmith-sprites
-  - [ ] gwillz.com ?
+  - [x] gwillz.com ?
 - half-arse showcases (readmes)
   - [x] unwind-js
   - [x] rest-cli
