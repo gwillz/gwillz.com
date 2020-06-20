@@ -164,6 +164,7 @@ h3 {
 p.links {
     & a {
         display: block;
+        margin: 5px 0;
     }
 }
 
