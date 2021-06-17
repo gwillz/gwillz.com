@@ -33,7 +33,7 @@
     "metalsmith": "^2.3.0",
     "metalsmith-sprites": "^1.0.0",
     "metalsmith-watch": "^1.0.3",
-    "postcss": "^7.0.27",
+    "postcss": "^7.0.36",
     "postcss-calc": "^7.0.2",
     "postcss-import": "^12.0.1",
     "postcss-preset-env": "^6.7.0",
