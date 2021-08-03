@@ -9,6 +9,6 @@ run() {
     $@ || exit $?
 }
 
-export NODE_ENV=production
 run npm ci --ignore-scripts --no-optional
+export NODE_ENV=production
 run npm run build
