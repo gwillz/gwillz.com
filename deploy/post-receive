@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+umask 002
+
+GIT_DIR="$(realpath $GIT_DIR)"
+
+cd ..
+
+echo "pwd: $(pwd)"
+echo "$(git --version)"
+
+./deploy/hook.sh || exit $?
+
+echo
+echo "Complete."
+echo
+exit 0
