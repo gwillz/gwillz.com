@@ -29,7 +29,7 @@
     "@types/webpack": "^4.4.27",
     "autoprefixer": "^9.7.4",
     "cssnano": "^4.1.10",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "metalsmith": "^2.3.0",
     "metalsmith-sprites": "^1.0.0",
     "metalsmith-watch": "^1.0.3",
